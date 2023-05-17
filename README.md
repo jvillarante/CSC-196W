@@ -1,0 +1,1 @@
+This is a repo for my CSC 196W course. In this course, I will be learning the basics of web programming. Enjoy.
