@@ -29,4 +29,30 @@
 
 function handleClick() {
   console.log("Button clicked!");
+
+  let textArea = document.getElementById("input-text");
+  let encryptedText = shiftCipher(textArea.value);
+  
+  let resultParagraph = document.getElementById("result");
+  resultParagraph.textContent = encryptedText;
+}
+
+function shiftCipher(text) {
+  text = String(text);
+  text = text.trim().toLowerCase();
+  let result = "";
+  //console.log(text.length);
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] < 'a' || text[i] > 'z') {
+      result += text[i];
+    }
+    else {
+      let letter = text.charCodeAt(i) - 97;
+      let resultLetter = String.fromCharCode(((letter + 1) % 26) + 97);
+      //console.log(resultLetter);
+      result += resultLetter;
+    }
+  }
+  //console.log(result);
+  return result;
 }
