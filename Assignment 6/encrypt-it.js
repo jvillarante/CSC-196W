@@ -1,7 +1,6 @@
 /*
  * Starter file 
  */
-console.log("Window loaded!");
 (function() {
   "use strict";
 
@@ -18,6 +17,8 @@ console.log("Window loaded!");
   function init() {
     // Note: In this function, we usually want to set up our event handlers
     // for UI elements on the page.
+    var encryptButton = document.getElementById("encrypt-it");
+    encryptButton.addEventListener("click", handleClick);
   }
 
   // Add any other functions in this area (you should not implement your
@@ -25,3 +26,7 @@ console.log("Window loaded!");
   // you shouldn't write an entire Java program in the main method).
 
 })();
+
+function handleClick() {
+  console.log("Button clicked!");
+}
