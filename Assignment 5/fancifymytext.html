@@ -18,9 +18,10 @@
 		<fieldset style="border: 1px solid black;">
 			<legend>Fancify</legend>
 			<button onclick="biggerText()">Bigger!</button>
-			<input type="radio" name="fanciness" value="fancy"> FancyShmancy
-			<input type="radio" name="fanciness" value="boring"> BoringBetty
+			<input id="fancyRadio" onchange="fancyShmancy()" type="radio" name="fanciness" value="fancy"> FancyShmancy
+			<input id="boringRadio" onchange="boringBetty()" type="radio" name="fanciness" value="boring"> BoringBetty
 		</fieldset>
-		
+
+		<button onclick="moo()">Moo</button>
 	</body>
 </html>
